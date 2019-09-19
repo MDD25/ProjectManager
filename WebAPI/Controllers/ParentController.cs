@@ -4,7 +4,7 @@ using WebAPI.Repository;
 
 namespace WebAPI.Controllers
 {
-    [EnableCors(origins: "http://localhost:4200", headers: "*", methods: "*")]
+    [System.Web.Http.Cors.EnableCors(origins: "http://localhost:4200", headers: "*", methods: "*")]
     [RoutePrefix("api/Parent")]
     public class ParentController : ApiController
     {
