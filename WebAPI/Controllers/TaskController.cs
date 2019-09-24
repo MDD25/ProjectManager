@@ -7,7 +7,7 @@ using WebAPI.Repository;
 
 namespace WebAPI.Controllers
 {
-    [EnableCors(origins: "http://localhost:4200", headers: "*", methods: "*")]
+    [System.Web.Http.Cors.EnableCors(origins: "http://localhost:4200", headers: "*", methods: "*")]
     [RoutePrefix("api/Task")]
     public class TaskController : ApiController
     {
@@ -76,7 +76,7 @@ namespace WebAPI.Controllers
                 }
                 else
                 {
-                    var task = new Task
+                    var task = new Task 
                     {
                         Task1 = taskModel.TaskName,
                         ProjectID = taskModel.ProjectID,
